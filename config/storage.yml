@@ -21,6 +21,15 @@ local:
 #   credentials: <%= Rails.root.join("path/to/gcs.keyfile") %>
 #   bucket: your_own_bucket-<%= Rails.env %>
 
+google:
+  service: S3
+  access_key_id: <%= ENV['GOOGLE_ACCESS_KEY_ID'] %>
+  secret_access_key: <%= ENV['GOOGLE_SECRET_ACCESS_KEY'] %>
+  region: us  # Region where your bucket is located
+  bucket: kings-of-cana-media
+  endpoint: https://storage.googleapis.com
+  credentials: <%= Rails.root.join("config/google-cloud-key.json") %>
+
 # Use bin/rails credentials:edit to set the Azure Storage secret (as azure_storage:storage_access_key)
 # microsoft:
 #   service: AzureStorage

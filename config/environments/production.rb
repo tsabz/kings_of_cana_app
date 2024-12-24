@@ -11,6 +11,9 @@ Rails.application.configure do
 
   # Full error reports are disabled.
   config.consider_all_requests_local = false
+  
+  ## Google cloud bucket
+  config.active_storage.service = :google
 
   # Cache assets for far-future expiry since they are all digest stamped.
   config.public_file_server.headers = { "cache-control" => "public, max-age=#{1.year.to_i}" }
@@ -19,7 +22,7 @@ Rails.application.configure do
   # config.asset_host = "http://assets.example.com"
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
-  config.active_storage.service = :local
+  # config.active_storage.service = :local
 
   # Assume all access to the app is happening through a SSL-terminating reverse proxy.
   config.assume_ssl = true
