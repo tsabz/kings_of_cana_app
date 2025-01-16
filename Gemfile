@@ -50,4 +50,4 @@ end
 
 gem "graphql", "~> 2.4"
 
-gem "aws-sdk-s3", "~> 1.176"
+gem "aws-sdk-s3", "~> 1.178"
